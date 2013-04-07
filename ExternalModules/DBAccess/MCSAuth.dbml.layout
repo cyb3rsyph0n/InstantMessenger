@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="MCSAuth">
+  <DataContextMoniker Name="/MCSAuthDataContext" />
+  <nestedChildShapes>
+    <classShape Id="1d311304-2fcb-48bc-86c0-5263dbc9cd3d" absoluteBounds="1.5, 0.5, 2, 6.7707340494791657">
+      <DataClassMoniker Name="/MCSAuthDataContext/UserItem" />
+      <nestedChildShapes>
+        <elementListCompartment Id="90afb385-dee1-4a03-81e3-ebce28c39859" absoluteBounds="1.5150000000000001, 0.96, 1.9700000000000002, 6.2107340494791661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ddc4e628-6758-4da7-8d7c-2b4334458f72" absoluteBounds="5.375, 1.5, 2, 5.4246240234375">
+      <DataClassMoniker Name="/MCSAuthDataContext/VendorItem" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7abbbbc5-06cd-4af4-874b-4fe05044d02c" absoluteBounds="5.39, 1.96, 1.9700000000000002, 4.8646240234375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.375 : 3.85589721679687); (3.5 : 3.85589721679687)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MCSAuthDataContext/VendorItem/VendorItem_UserItem" />
+      <nodes>
+        <classShapeMoniker Id="ddc4e628-6758-4da7-8d7c-2b4334458f72" />
+        <classShapeMoniker Id="1d311304-2fcb-48bc-86c0-5263dbc9cd3d" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

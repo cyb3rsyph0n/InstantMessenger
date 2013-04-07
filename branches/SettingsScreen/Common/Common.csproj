@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0152C6F2-C20D-4FE2-8326-ECEACC114B6C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Common</RootNamespace>
+    <AssemblyName>Common</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DBAccess\Conversation.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Conversation.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DBAccess\Files.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Files.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DBAccess\UserState.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserState.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\IAuthenticationProvider.cs" />
+    <Compile Include="Interfaces\IContactsPlugin.cs" />
+    <Compile Include="Interfaces\IContactsProvider.cs" />
+    <Compile Include="Interfaces\IContactsWindow.cs" />
+    <Compile Include="Interfaces\IConversationPlugin.cs" />
+    <Compile Include="Interfaces\IPlugin.cs" />
+    <Compile Include="Interfaces\IPropertyPage.cs" />
+    <Compile Include="Interfaces\IRecentConversationsWindow.cs" />
+    <Compile Include="Messages\Message_Authenticate.cs" />
+    <Compile Include="Messages\Message_CreateConversation.cs" />
+    <Compile Include="Messages\Message_EnteredText.cs" />
+    <Compile Include="Messages\Message_Error.cs" />
+    <Compile Include="Messages\Message_GetContacts.cs" />
+    <Compile Include="Messages\Message_GetConversation.cs" />
+    <Compile Include="Messages\Message_GetFile.cs" />
+    <Compile Include="Messages\Message_GetMissedConversations.cs" />
+    <Compile Include="Messages\Message_GetRecentConversations.cs" />
+    <Compile Include="Messages\Message_KeppAlive.cs" />
+    <Compile Include="Messages\Message_SendFile.cs" />
+    <Compile Include="Messages\Message_StatusUpdate.cs" />
+    <Compile Include="Messages\Message_UpdateMessageTitle.cs" />
+    <Compile Include="Messages\Message_GetRunningProcesses.cs" />
+    <Compile Include="Messages\Message_GetRunningProcessesResponse.cs" />
+    <Compile Include="Messages\Message_InviteToConversation.cs" />
+    <Compile Include="Messages\Message_KillProcess.cs" />
+    <Compile Include="Messages\Message_RemoveFromConversation.cs" />
+    <Compile Include="Messages\Message_GetScreenShot.cs" />
+    <Compile Include="Messages\Message_GetScreenShotResponse.cs" />
+    <Compile Include="Other\ConfigWrapper.cs" />
+    <Compile Include="Other\EnumPluginTypes.cs" />
+    <Compile Include="Other\EnumWindowTypes.cs" />
+    <Compile Include="Other\Sounds.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Structures\AuthResult.cs" />
+    <Compile Include="Windows\FlashWindow.cs" />
+    <Compile Include="Windows\frmError.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\frmError.Designer.cs">
+      <DependentUpon>frmError.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Messages\Message_HandShake.cs" />
+    <Compile Include="Other\Connection.cs" />
+    <Compile Include="Delegates\Delegates.cs" />
+    <Compile Include="Messages\Message_Global.cs" />
+    <Compile Include="Interfaces\IConversationWindow.cs" />
+    <Compile Include="Interfaces\IServerMessage.cs" />
+    <Compile Include="Messages\MessageWrapper.cs" />
+    <Compile Include="Messages\Message_Private.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Messages\Message_BounceBack.cs" />
+    <Compile Include="Other\StaticFunctions.cs" />
+    <Compile Include="Windows\frmRunningProcesses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\frmRunningProcesses.Designer.cs">
+      <DependentUpon>frmRunningProcesses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\frmScreenShot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\frmScreenShot.Designer.cs">
+      <DependentUpon>frmScreenShot.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DBAccess\Conversation.dbml.layout">
+      <DependentUpon>Conversation.dbml</DependentUpon>
+    </None>
+    <None Include="DBAccess\Files.dbml.layout">
+      <DependentUpon>Files.dbml</DependentUpon>
+    </None>
+    <None Include="DBAccess\UserState.dbml.layout">
+      <DependentUpon>UserState.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="Windows\frmError.resx">
+      <DependentUpon>frmError.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\frmRunningProcesses.resx">
+      <DependentUpon>frmRunningProcesses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\frmScreenShot.resx">
+      <DependentUpon>frmScreenShot.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="DBAccess\DB Creation.sql" />
+    <None Include="DBAccess\Conversation.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Conversation.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DBAccess\Files.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Files.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DBAccess\UserState.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>UserState.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

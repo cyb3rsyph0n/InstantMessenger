@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<settings>
+  <listen port="1024" />
+  <DBConnection Server="" User="" Password="" Encrypted="False" />
+  <AuthenticationProvider file="ExternalModules.dll" library="ExternalModules.Authentication" class="Authentication" />
+  <ContactsProvider file="ExternalModules.dll" library="ExternalModules.Contacts" class="Contacts" />
+</settings>

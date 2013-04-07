@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DB_Conversation">
+  <DataContextMoniker Name="/ConversationDataContext" />
+  <nestedChildShapes>
+    <classShape Id="e48506af-d6df-4502-b37c-3a2c7b2e6e37" absoluteBounds="0.5, 0.5, 2, 1.26050048828125">
+      <DataClassMoniker Name="/ConversationDataContext/ConversationItem" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9be228d8-0316-4873-9a02-8f6fa606ff4b" absoluteBounds="0.51500000000000012, 0.96, 1.9700000000000002, 0.70050048828125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="db67634d-3f1c-477f-9a79-c9d78e60e286" absoluteBounds="3.625, 0.5, 2, 1.26050048828125">
+      <DataClassMoniker Name="/ConversationDataContext/ConversationMember" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2fcaecd2-476c-48ea-a08d-3c12f010c1b6" absoluteBounds="3.6399999999999997, 0.96, 1.9700000000000002, 0.70050048828125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.5 : 1.13025024414063); (3.625 : 1.13025024414063)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ConversationDataContext/ConversationItem/ConversationItem_ConversationMember" />
+      <nodes>
+        <classShapeMoniker Id="e48506af-d6df-4502-b37c-3a2c7b2e6e37" />
+        <classShapeMoniker Id="db67634d-3f1c-477f-9a79-c9d78e60e286" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="6dc79b13-ae0f-4ec5-9969-837f2ff48633" absoluteBounds="0.5, 2.75, 2, 1.26050048828125">
+      <DataClassMoniker Name="/ConversationDataContext/MessageItem" />
+      <nestedChildShapes>
+        <elementListCompartment Id="28959662-7280-426c-a78b-7f52ccad2abd" absoluteBounds="0.51500000000000012, 3.21, 1.9700000000000002, 0.70050048828125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.5 : 1.76050048828125); (1.5 : 2.75)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ConversationDataContext/ConversationItem/ConversationItem_MessageItem" />
+      <nodes>
+        <classShapeMoniker Id="e48506af-d6df-4502-b37c-3a2c7b2e6e37" />
+        <classShapeMoniker Id="6dc79b13-ae0f-4ec5-9969-837f2ff48633" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="26aec9e7-2f01-4d99-8850-91fd1c79f070" absoluteBounds="4.25, 3.125, 2, 1.26050048828125">
+      <DataClassMoniker Name="/ConversationDataContext/MissedConversationItem" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a4ff2d23-274f-4504-9da4-082962c82137" absoluteBounds="4.265, 3.585, 1.9700000000000002, 0.70050048828125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.5 : 1.76050048828125); (2.875 : 2.13550048828125); (2.875 : 3.75525024414063); (4.25 : 3.75525024414063)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ConversationDataContext/ConversationItem/ConversationItem_MissedConversationItem" />
+      <nodes>
+        <classShapeMoniker Id="e48506af-d6df-4502-b37c-3a2c7b2e6e37" />
+        <classShapeMoniker Id="26aec9e7-2f01-4d99-8850-91fd1c79f070" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

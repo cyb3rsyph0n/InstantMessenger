@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="IM" Class="ConversationDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=localhost\sqlexpress;Initial Catalog=IMDB;Integrated Security=True" SettingsObjectName="Common.Properties.Settings" SettingsPropertyName="IMDBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.tblConversationList" Member="ConversationItems">
+    <Type Name="ConversationItem">
+      <Column Name="ConversationID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ConversationGUID" Type="System.String" DbType="VarChar(36) NOT NULL" CanBeNull="false" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="ConversationItem_ConversationMember" Member="ConversationMembers" ThisKey="ConversationID" OtherKey="ConversationID" Type="ConversationMember" />
+      <Association Name="ConversationItem_MessageItem" Member="MessageItems" ThisKey="ConversationID" OtherKey="ConversationID" Type="MessageItem" />
+      <Association Name="ConversationItem_MissedConversationItem" Member="MissedConversationItems" ThisKey="ConversationID" OtherKey="ConversatioID" Type="MissedConversationItem" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblConversationMembers" Member="ConversationMembers">
+    <Type Name="ConversationMember">
+      <Column Name="ConversationMemberID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ConversationID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="UserID" Storage="_UniqueID" Type="System.String" DbType="VarChar(36) NOT NULL" CanBeNull="false" />
+      <Association Name="ConversationItem_ConversationMember" Member="ConversationItem" Storage="_ConversationList" ThisKey="ConversationID" OtherKey="ConversationID" Type="ConversationItem" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblMessages" Member="MessageItems">
+    <Type Name="MessageItem">
+      <Column Name="MessageID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ConversationID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="MessageData" Type="System.Data.Linq.Binary" DbType="Image NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="ConversationItem_MessageItem" Member="ConversationItem" ThisKey="ConversationID" OtherKey="ConversationID" Type="ConversationItem" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblMissedConversations" Member="MissedConversationItems">
+    <Type Name="MissedConversationItem">
+      <Column Name="MissedMessageID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserID" Type="System.String" DbType="VarChar(36) NOT NULL" CanBeNull="false" />
+      <Column Name="ConversatioID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Association Name="ConversationItem_MissedConversationItem" Member="ConversationItem" ThisKey="ConversatioID" OtherKey="ConversationID" Type="ConversationItem" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<settings>
+  <icon text="(?&lt;!&gt;)(:\)|:-\))" image="smile.png" send=":)" />
+  <icon text="&lt;3" image="red_heart.png" send="&lt;3" />
+  <icon text="&gt;:\)" image="hell_boy.png" send="&gt;:)" />
+  <icon text="\$\)" image="money.png" send="$)" />
+  <icon text=":/(?!/)" image="confuse.png" send=":/" />
+  <icon text=":D" image="dhh.png" send=":D" />
+  <icon text=":\((?!\\)" image="unhappy.png" send=":(" />
+  <icon text=":hungry:" image="hungry.png" send=":hungry:" />
+  <icon text=":scream:" image="ah.png" send=":scream:" />
+  <icon text=":anger:" image="anger.png" send=":anger:" />
+  <icon text=":angry:" image="angry.png" send=":angry:" />
+  <icon text="(?i):p" image="grimace.png" send=":P" />
+  <icon text=";\)" image="look_down.png" send=";)" />
+  <icon text=":amazing:" image="amazing.png" send=":amazing:" />
+  <icon text=":haha:" image="haha.png" send=":haha:" />
+  <icon text=":nothing:" image="nothing.png" send=":nothing:" />
+  <icon text=":horror:" image="horror.png" send=":horror:" />
+  <icon text=":oh:" image="oh.png" send=":oh:" />
+  <icon text="(:cry:|:&quot;\()" image="cry.png" send=":&quot;(" />
+  <icon text=":exciting:" image="exciting.png" send=":exciting:" />
+  <icon text=":superman:" image="super_man.png" send=":superman:" />
+  <icon text=":spiderman:" image="spiderman.png" send=":spiderman:" />
+  <icon text=":girl:" image="girl.png" send=":girl:" />
+  <icon text=":what:" image="what.png" send=":what:" />
+  <icon text=":waht:" image="waaaht.png" send=":waht:" />
+  <icon text=":victory:" image="victory.png" send=":victory:" />
+  <icon text=":dribble:" image="dribble.png" send=":dribble:" />
+</settings>
